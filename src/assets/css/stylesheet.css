@@ -1,0 +1,134 @@
+/*Global Styles*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+body {
+  margin: 0 auto;
+  background-color: #ff9999;
+  font-family: 'Avenir Next', 'Arial', sans-serif;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 75%;
+}
+h1 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 3.5rem
+}
+h2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2rem;
+  margin-top: 0;
+}
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+h4 {
+  margin: 0;
+  font-weight: 400;
+  border-bottom: 1px solid #003399;
+}
+pre {
+  overflow: scroll;
+  font-size: 0.7rem;
+}
+/*Header & Footer*/
+header {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#336600), to(#003399));
+  background: -webkit-linear-gradient(top, #336600 0%, #003399 100%);
+  background: -o-linear-gradient(top, #336600 0%, #003399 100%);
+  background: linear-gradient(to bottom, #336600 0%, #003399 100%);
+  padding: 2rem 0rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+footer {
+  background-color: #003399;
+  color: #fff;
+  padding: 2rem 0rem;
+}
+main {
+  background-color: #33cc8f;
+  padding: 2rem 0rem;
+}
+nav a {
+  background-color: #ff9999;
+  border-bottom: 2px solid #ff9999;
+  padding: 0rem 0.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Comments */
+#sortbtn {
+  margin: 1rem auto;
+  width: 25%;
+  text-align: center;
+}
+
+.com_wrap {
+  margin-bottom: 1rem;
+  background-color: rgba(230,255,245,0.5);
+}
+.com_wrap:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.com_body {
+  width: calc(100% - 120px);
+  float: right;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.com_info {
+  width: 120px;
+  float: left;
+  padding: 1rem;
+}
+img {
+  border-radius: 50%;
+}
+#status {
+  text-align: center;
+}
+
+/* Form */
+#postcomment {
+  background-color: #e6e6ff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+label, input, textarea, button, select {
+  font-family: 'Avenir Next', 'Arial', sans-serif;
+  display: block;
+  border: none;
+}
+input, textarea, select {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+textarea {
+  height: 150px;
+  resize: none;
+}
+button {
+  border: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
