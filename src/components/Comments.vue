@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import Comment from "./Comment"
+  import Comment from "@/components/Comment"
   export default {
     name: "Comments",
     components: {
