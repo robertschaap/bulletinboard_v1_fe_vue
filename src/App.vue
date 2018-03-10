@@ -5,13 +5,13 @@
       <div class="wrapper">
         <h1>Bulletin Board</h1>
         <nav>
-          <a href="#">Write</a>
-          <a href="#">Read</a>
+          <a href="/writesomething">Write</a>
+          <a href="/readsomething">Read</a>
         </nav>
       </div>
     </header>
 
-    <Comments />
+    <router-view/>
     
     <footer>
       <div class="wrapper">
@@ -19,7 +19,6 @@
       </div>
     </footer>
 
-    <!-- <router-view/> -->
   </div>
 </template>
 
