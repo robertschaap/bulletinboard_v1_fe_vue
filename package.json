@@ -10,6 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -58,5 +61,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "proxy": "http://localhost:3001"
 }

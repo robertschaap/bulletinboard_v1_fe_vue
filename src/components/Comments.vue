@@ -18,13 +18,14 @@
       </section>
 
       <section>
-        <button id="loadcomments" class="wrapper">Load More Comments</button>
+        <button v-on:click="loadData" id="loadcomments" class="wrapper">Load More Comments</button>
       </section>
     </main>
 </template>
 
 <script>
   import Comment from "@/components/Comment"
+
   export default {
     name: "Comments",
     components: {
@@ -32,20 +33,29 @@
     },
     data() {
       return {
-        comments: [
-          { 
-            title: "Test",
-            name: "Robert",
-            body: "Mmtest",
-            avatar: "logo"
-          }, { 
-            title: "Test",
-            name: "Robert",
-            body: "Mmtest",
-            avatar: "logo"
-          },
-        ]
+        comments: [],
+        sortDirection: "desc",
+        offset: 0
+      };
+    },
+    created() {
+      this.loadData();
+    },
+    methods: {
+      loadData() {
+        let { offset, sortDirection } = this;
+
+        fetch(`/api/comment?offset=${offset}&sort=${sortDirection}`)
+        .then(res => res.json())
+        .then(data => {
+          this.comments = [
+            ...this.comments,
+            ...data
+          ]
+          this.offset += 4;
+        });
       }
     }
   }
 </script>
+
