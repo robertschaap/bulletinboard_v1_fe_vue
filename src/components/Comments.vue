@@ -9,16 +9,21 @@
 
         <Comment
           v-for="entry in comments"
-            :key=entry.id
-            :title=entry.title
-            :name=entry.name
-            :body=entry.body
-            :avatar=entry.avatar />
+          :key=entry.id
+          :title=entry.title
+          :name=entry.name
+          :body=entry.body
+          :avatar=entry.avatar />
 
       </section>
 
       <section>
-        <button v-on:click="loadData" id="loadcomments" class="wrapper">Load More Comments</button>
+        <button
+          v-on:click="loadData"
+          id="loadcomments"
+          class="wrapper">
+          Load More Comments
+        </button>
       </section>
     </main>
 </template>
@@ -59,3 +64,41 @@
   }
 </script>
 
+<style scoped>
+  main {
+    background-color: #33cc8f;
+    padding: 2rem 0rem;
+  }
+  
+  h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  button, select {
+    font-family: 'Avenir Next', 'Arial', sans-serif;
+    display: block;
+    border: none;
+  }
+
+  button {
+    border: none;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  #sortbtn {
+    margin: 1rem auto;
+    width: 25%;
+    text-align: center;
+  }
+</style>
