@@ -3,7 +3,10 @@
     <section id="commentform">
       <h2>Write Something</h2>
 
-      <form v-on:submit.prevent="handleSubmit" id="postcomment" class="wrapper">
+      <form
+        v-on:submit.prevent="handleSubmit"
+        id="postcomment"
+        class="wrapper">
         <label>What's your name?:</label>
         <input type="text" v-model="form.name" />
 
@@ -50,3 +53,54 @@
     }
   }
 </script>
+
+<style scoped>
+  main {
+    background-color: #33cc8f;
+    padding: 2rem 0rem;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  #postcomment {
+    background-color: #e6e6ff;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  label, input, textarea, button, select {
+    font-family: 'Avenir Next', 'Arial', sans-serif;
+    display: block;
+    border: none;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  button {
+    border: none;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+</style>
