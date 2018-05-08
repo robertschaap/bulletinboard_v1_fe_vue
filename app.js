@@ -26,11 +26,15 @@ app.get("/api/comment/", (req, res) => {
     .sort({ createdAt: sort })
     .limit(4)
     .skip(+offset)
-    .then(result => { 
+    .then(result => {
       res.json(result);
     });
 });
 
 app.post("/api/comment/new", (req, res) => {
-  console.log("hit post route");
+
+  let { title, body, avatar, name } = req.body;
+
+  Comment.new(title, body, avatar, name)
+    .then(result => res.json(result));
 });

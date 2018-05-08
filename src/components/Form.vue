@@ -26,7 +26,7 @@
           <option value="puppy">A bashful puppy</option>
           <option value="sheep">The master race</option>
         </select>
-        
+
         <button type="submit">Submit</button>
       </form>
     </section>
@@ -37,7 +37,7 @@
   export default {
     name: "Form",
     data() {
-      return { 
+      return {
         form: {
           name: '',
           title: '',
@@ -48,7 +48,14 @@
     },
     methods: {
       handleSubmit: function() {
-        console.log("handlesubmit", this.form)
+        fetch(`/api/comment/new`, {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(this.form)
+        })
+        .then(this.$router.push("/"))
       }
     }
   }
@@ -94,7 +101,7 @@
     height: 150px;
     resize: none;
   }
-  
+
   button {
     border: none;
     padding: 0.5rem;
