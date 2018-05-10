@@ -30,34 +30,38 @@
 
 <script>
   import Comment from "@/components/Comment"
+  import { mapState, mapActions } from "vuex";
 
   export default {
     name: "Comments",
     components: {
       Comment
     },
-    data() {
-      return {
-        comments: [],
-        sortDirection: "desc",
-        offset: 0
-      };
-    },
     created() {
       this.loadData();
     },
+    computed: {
+      ...mapState([
+        'comments',
+        'sortDirection',
+        'offset',
+      ])
+    },
     methods: {
+      ...mapActions([
+        'appendComments',
+        'changeOffset',
+        'changeSortDirection'
+      ]),
       loadData() {
         let { offset, sortDirection } = this;
 
         fetch(`/api/comment?offset=${offset}&sort=${sortDirection}`)
         .then(res => res.json())
         .then(data => {
-          this.comments = [
-            ...this.comments,
-            ...data
-          ]
-          this.offset += 4;
+          this.changeOffset(4)
+          this.appendComments(data)
+          this.changeDirection(sortDirection)
         });
       }
     }
@@ -69,7 +73,7 @@
     background-color: #33cc8f;
     padding: 2rem 0rem;
   }
-  
+
   h2 {
     text-align: center;
     font-weight: 200;
