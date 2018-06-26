@@ -1,21 +1,20 @@
-# bulletinboard_mevn-stack
+# Bulletin Board
+A simple bulletin board where you can leave a message and which is populated dynamically from a database with pagination.
 
-> A Vue.js project
+##### Technologies
+HTML5 | CSS3 | JavasScript | Node.js | Express
+Vue | Vuex | MongoDB | Mongoose
 
-## Build Setup
+### Scope
+##### What was designed to do
++ Be a simple bulletin board
++ Allow a user to post a message with title and pick an avatar
++ Be an introduction into Vue / Vuex
 
-``` bash
-# install dependencies
-npm install
+##### What it wasn't designed to do
+- Manage sessions or users
+- Upload a picture of your own
+- Be anything more than a simple bulletin board
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Installation Notes
+If you are looking to install this locally, please feel free to clone or download the repository. Modules are all included in the package.json but please note that you will need to have MongoDB installed locally as well. The populate file in the models folder is called from `app.js` to fill the database with dummy entries, please check the port setup though and be sure to uncomment lines 17 and 18 in `app.js`.
