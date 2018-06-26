@@ -31,7 +31,7 @@ app.get("/api/comment/", (req, res) => {
     });
 });
 
-app.post("/api/comment/new", (req, res) => {
+app.post("/api/comment/new/", (req, res) => {
 
   let { title, body, avatar, name } = req.body;
 
