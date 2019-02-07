@@ -3,13 +3,13 @@ A simple bulletin board where you can leave a message and which is populated dyn
 
 ##### Technologies
 HTML5 | CSS3 | JavasScript | Node.js | Express
-Vue | Vuex | MongoDB | Mongoose
+Vue | MongoDB | Mongoose
 
 ### Scope
 ##### What was designed to do
 + Be a simple bulletin board
 + Allow a user to post a message with title and pick an avatar
-+ Be an introduction into Vue / Vuex
++ Be an introduction into Vue
 
 ##### What it wasn't designed to do
 - Manage sessions or users
